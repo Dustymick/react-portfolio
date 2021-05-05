@@ -12,8 +12,7 @@ function About() {
           Full Stack Web Developer and Certified Hyland OnBase System Administrator seeking a role in 
           Enterprise Content Management Software Administration 
           and Hyland OnBase Software Administration that will use my experience and competency in: 
-          full stack web development, administering software, leading teams, 
-          and managing processes.
+          managing processes, leading teams, administering software, amd front-end and back-end web development.
           </p>
         </div>
        
