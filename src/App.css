@@ -1,42 +1,264 @@
-.App {
-  text-align: center;
+
+
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(90deg, rgba(179,238,174,1) 0%, rgba(148,168,233,1) 100%);
+  animation: color-rotate 5s infinite;
+  background-size: 200% 200%;
+  font-family: "Fjalla One" , sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes color-rotate {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  padding: 4px 5%;
+}
+
+h1 {
+  color:  #212e53; 
+}
+
+.nav-bar {
+  list-style-type:none;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar li {
+  display: inline-block;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  transition: 250ms;
+  margin-left: 30px;
+  padding: 10px 20px;
+
+}
+
+.nav-bar li:hover {
+  background-color: #212e53; 
+  transition: 500ms;
+}
+
+.nav-bar li a {
+  width: 100%;
+  display: block;
+  color: #4a919e;
+  -webkit-text-stroke: 1px #212e53;
+}
+
+.container {
+  display: flex;
+  min-height: 200px;
+  padding-top: 30px;
+}
+
+.title {
+  width: 20%;
+  border-right: 5px solid rebeccapurple;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  font-size: 1.7em;
+  text-align: right;
+}
+
+.title h1 {
+  margin: 0;
+
+}
+
+.content {
+  padding: 15px;
+  width: 915px;
+}
+
+.content p {
+  margin: 10;
+  font-size: 1.2em;
+}
+
+#About-Me .content {
+  display: flex;
+  align-items: center;
+}
+
+#project-grid {
+  display: grid;
+  column-gap: 5px;
+  row-gap: 5px;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-areas:   
+          'box1 box1 .'
+          'box1 box1 .'
+          '. . .';
+}
+
+#box1 {
+  grid-area: box1;
+  background-image: url("./images/alien-generator.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.project-box {
+  border: 5px solid black;
+  overflow: hidden;
+  transition: 750ms;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.project-box-title {
+  background-color:thistle;
+  padding: 15px;
+  width: max-content;
+  margin-bottom: 20px;
+  margin-left: -50%;
+  transition: margin-left 500ms;
+  visibility: hidden;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  padding-right: 25px;
+  
+}
+
+.project-box:hover .project-box-title{
+  margin-left: 10px;
+  visibility: visible;
+}
+
+.project-box:hover {
+  background-size: 110% 110% !important;
+  transition: 750ms;
+}
+
+.project-box-title h1{
+  margin: 0;
+  font-size: 20px;
+}
+
+.project-box a, .contact-tile a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+#box2 {
+  background-image:  url("./images/weather-app.png");
+}
+
+#box3 {
+  background-image: url("./images/run-buddy.png");
+ 
+}
+
+#box4 {
+  background-image: url("./images/password-generator.png");
+}
+
+#box5 {
+  background-image: url("./images/blogspot2.png")
+}
+
+#box6 {
+  background-image: url("./images/foodplanner.png");
+}
+
+#contact-wrapper {
+  display: flex;
+  width: 915px;
+  justify-content: space-evenly;
+}
+
+.contact-tile {
+  height: 200px;
+  width: 150px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+
+}
+
+.contact-tile a {
+  height: 100px;
+  width: 100px;
+}
+
+.contact-tile i {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  transition: 500ms;
+  border-radius: 10px;
+}
+
+.contact-tile i:hover {
+  transform: scale(1.1);
+  transition: 750ms;
+}
+
+.phone-img {
+  background-image: url("./images/phone.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.email-img {
+  background-image: url("./images/email-image.png");
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.linkedin-img {
+  background-image: url("./images/linkedin.png");
+  background-color: white;
+
+}
+
+.github-img {
+  background-image: url("./images/github.png");
+}
+
+footer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgba(0,0,0,0.3);
+  margin-top: 4%;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.tweet {
-  border: 2px solid black;
-}

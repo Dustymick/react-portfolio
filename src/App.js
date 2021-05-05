@@ -1,21 +1,20 @@
-import React, {useState} from "react";
-import Tweet from "./components/tweet/index"
-
+import React from "react";
+import Nav from "./components/Nav";
+import About from './components/About';
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import "./App.css";
 
 function App() {
-  const [users, setUsers] = useState([
-    {name: "Ed", message: "Hello There"}, 
-    {name: "John", message: "Have a good day"},
-    {name: "Dustin", message: "Goodbye"},
-  ]);
 
   return (
-    <div className="app">
-      <main>
-        {users.map(user =>(
-          <Tweet name={user.name} message={user.message} likes={user.likes}/>
-        ))} 
-      </main>
+    <div> 
+      
+        <Nav/>
+         <About/>
+         <Projects/>
+         <Contact/>
+      
     </div>
   );
 }
