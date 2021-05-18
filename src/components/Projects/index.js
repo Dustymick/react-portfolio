@@ -24,9 +24,9 @@ function Projects() {
                     </div>
 
                     <div className="project-box" id="box3">
-                        <a href="https://dustymick.github.io/run-buddy/">
+                        <a href="https://deep-thoughts-to-share.herokuapp.com/">
                             <div className="project-box-title">
-                                <h1>Run Buddy</h1>
+                                <h1>Deep Thoughts</h1>
                             </div>
                         </a>
                     </div>
