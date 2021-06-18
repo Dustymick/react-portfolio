@@ -9,9 +9,9 @@ function About() {
         </div>
         <div className="content">
           <p>
-          Full Stack Web Developer and Certified Hyland OnBase System Administrator with experience and competency in:  
-          managing processes, leading teams, administering software, Enterprise Content Management, 
-          and front-end and back-end web development.
+          Certified Full Stack Web Developer and Certified Hyland OnBase System Administrator seeking a web developer role and software developer role 
+          that will leverage my experience and competency in:  front-end and back-end web development, administering software, managing processes, 
+          and leading teams.
           </p>
         </div>
        
